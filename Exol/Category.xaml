@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exol.Category"
+             xmlns:local ="clr-namespace:Exol"
+             Title=""
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid Padding="16"
+          RowDefinitions="Auto,Auto,*">
+
+        <HorizontalStackLayout>
+            <Label Text="Expert Or Liar"
+                   FontFamily="GothamBold"
+                   FontSize="25"
+                   TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+        </HorizontalStackLayout>
+
+        <Label Text="Select one of the categories below, to start the quiz now"
+               FontFamily="GothamRegular"
+               Grid.Row="1"
+               FontSize="18"
+               TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+        
+        <CollectionView x:Name="CategoriesCollectionView"
+                        Grid.Row="2"
+                        SelectionMode="Single"
+                        Margin="0,16">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border MinimumHeightRequest="315"
+                            Stroke="{AppThemeBinding Light={StaticResource newcolorr}, Dark={StaticResource DarkGrey}}">
+                        <Grid ColumnDefinitions="*,2*">
+
+                            <Image Source="{Binding ImageUrl}"
+                                   Aspect="AspectFill"/>
+
+                            <Grid Grid.Column="1" 
+                                  Padding="16"
+                                  RowDefinitions="Auto,*">
+
+                                <!-- Title-->
+                                <Label Text="{Binding Title}"
+                                       FontSize="24"
+                                       FontFamily="GothamBold"
+                                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+
+
+                                <!-- Description-->
+                                <Label Text="{Binding Description}"
+                                       Grid.Row="1"
+                                       Padding="0,8,0,0"
+                                       FontSize="16"
+                                       FontFamily="GothamRegular"
+                                       TextColor="{AppThemeBinding Light={StaticResource GreySmoke}, Dark={StaticResource WhiteSmoke}}"/>
+
+                               
+
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </Grid>
+
+</ContentPage>
+    
+    

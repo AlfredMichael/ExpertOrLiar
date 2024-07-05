@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Archive>
+  <Name>Expert Or Liar</Name>
+  <PackageName>com.companyname.exol</PackageName>
+  <PackageVersionCode>1</PackageVersionCode>
+  <PackageVersionName>1.0</PackageVersionName>
+  <PackageFormat>apk</PackageFormat>
+  <CreationDate>638558114861846444</CreationDate>
+  <SolutionName>Exol</SolutionName>
+  <SolutionPath>C:\Users\succe\source\repos\Exol\Exol.sln</SolutionPath>
+  <Status></Status>
+  <MinSdkVersion>21</MinSdkVersion>
+  <Configuration>
+    <DebugMode>false</DebugMode>
+  </Configuration>
+</Archive>

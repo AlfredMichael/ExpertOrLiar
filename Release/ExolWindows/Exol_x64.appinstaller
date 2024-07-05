@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="file:///C:/TempRelease/Exol_x64.appinstaller"
+	Version="0.0.3.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	<MainPackage
+		Name="B66E49F2-6DDE-4C9B-88F6-A540A0614320"
+		Version="0.0.3.0"
+		Publisher="CN=Fredthedev"
+		Uri="file:///C:/TempRelease/Exol_0.0.3.0_x64_Test/Exol_0.0.3.0_x64.msix"
+		ProcessorArchitecture="x64" />
+	<Dependencies>
+		<Package
+			Name="Microsoft.WindowsAppRuntime.1.2"
+			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+			ProcessorArchitecture="x64"
+			Uri="file:///C:/TempRelease/Exol_0.0.3.0_x64_Test/Dependencies/x64/Microsoft.WindowsAppRuntime.1.2.msix"
+			Version="2000.707.2303.0" />
+	</Dependencies>
+	<UpdateSettings>
+		<OnLaunch
+			HoursBetweenUpdateChecks="0" />
+	</UpdateSettings>
+</AppInstaller>

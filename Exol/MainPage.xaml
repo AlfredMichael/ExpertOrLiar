@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="Exol.MainPage"
+              Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="Black" StatusBarStyle="LightContent"/> 
+    </Page.Behaviors>
+    <!-- Image Row dotnet_bot.png change this shit-->
+
+    <Grid VerticalOptions="Center"
+          RowDefinitions="375,*">
+
+        <Grid Grid.Row="0">
+            <Image Source="firstcontact.png"
+                   Aspect="AspectFit"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="End"
+                   Margin="0,0,0,-10"/>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              RowDefinitions="100, *"
+              RowSpacing="0">
+
+            <VerticalStackLayout Grid.Row="1"
+                                 Margin="0,-25,0,0"
+                                 Padding="30,0,30,30">
+
+                <Label Text="Welcome to Expert or Liar"
+                       FontSize="28"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                       FontFamily="GothamBold"/>
+
+                <Label Text="Yeah, that's right! I'm Bert Coleman, host of TV's hit game show: Expert or Liar! Each day I disguise myself and question people to see who's an 'Expert Or Liar' "
+                       HorizontalTextAlignment="Center"
+                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                       Margin="0,0,0,8"
+                       FontFamily="GothamRegular"/>
+
+                <Button Text="I'm totally an expert!"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                        TextColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
+                        HeightRequest="55"
+                        CornerRadius="10"
+                        Clicked="OnNavigateButtonClicked"
+                        Margin="0,18,0,15"
+                        FontFamily="GothamRegular"/>
+
+                <Button Text="Get away from me, creep!"
+                        BorderColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                        TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                        BorderWidth="1"
+                        Clicked="OnCloseButtonClicked"
+                        HeightRequest="55"
+                        CornerRadius="10"
+                        BackgroundColor="Transparent"
+                        Margin="0,0,0,10"
+                        FontFamily="GothamRegular"/>
+
+            </VerticalStackLayout>
+            
+        </Grid>
+        
+    </Grid>
+
+
+
+
+
+
+
+</ContentPage>

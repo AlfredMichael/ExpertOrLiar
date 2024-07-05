@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exol.ResultsPage"
+              Shell.NavBarIsVisible="False"
+             Title=""
+             NavigationPage.HasNavigationBar="False">
+
+
+    <Grid VerticalOptions="Center"
+          RowDefinitions="375,*">
+
+        <Grid Grid.Row="0">
+            <Image Source="firstcontact.png"
+                   Aspect="AspectFit"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="End"
+                   x:Name="resultImage"
+                   Margin="0,0,0,-10"/>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              RowDefinitions="100, *"
+              RowSpacing="0">
+
+            <VerticalStackLayout Grid.Row="1"
+                                 Margin="0,-25,0,0"
+                                 Padding="30,0,30,30">
+
+                <Label Text="Expert Or Liar Header"
+                       x:Name="resultHead"
+                       FontSize="28"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                       FontFamily="GothamBold"/>
+
+                <Label Text="Expert Or Liar Description"
+                       x:Name="resultDesc"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                       Margin="0,0,0,8"
+                       FontFamily="GothamRegular"/>
+
+                <Label Text="Your Score"
+                       x:Name="labelScore"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                       Margin="0,0,0,8"
+                       FontFamily="GothamRegular"/>
+
+
+                <HorizontalStackLayout Margin="0,18,0,15"
+                                       HorizontalOptions="CenterAndExpand"
+                                       Spacing="10">
+
+
+                    <Button Text="Quit Application"
+                        BorderColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                        TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                        BorderWidth="1"
+                        HeightRequest="55"
+                        CornerRadius="10"
+                        
+                        BackgroundColor="Transparent"
+                        
+                        Clicked="OnCloseButtonClicked"
+                        FontSize="15"
+                        FontFamily="GothamRegular"/>
+
+
+
+                    <Button Text="Berttt Colemannn!!!"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                        TextColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
+                        HeightRequest="55"
+                        CornerRadius="10"
+                        
+                        Clicked="OnNavigateCollectionsButtonClicked"
+                        FontSize="15"
+                        
+                        FontFamily="GothamRegular"/>
+
+                </HorizontalStackLayout>
+                
+            </VerticalStackLayout>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
